@@ -18,7 +18,29 @@ Vamos a empezar con una pila vacía
 
 Vamos a agregar el primer elemento a la pila, en este el 10
 
-![Se agrega 10 a la pila vacía](./images/added_10_to_stack.png.png)
+![Se agrega 10 a la pila vacía](./images/added_10_to_stack.png)
+
+Ahora vamos a agregar el 20, para agregar el 20 hay que tener en cuenta que el 10 cae al fondo de la pila, es decir, el 10 se convierte en el primer elemento de la pila, si agregamos el 20 quedaría de la siguiente manera:
+
+![Se agrega 20 a la pila](./images/added_20_to_stack.png)
+
+Siguiendo la misma lógica aplicada para el 20 ahora vamos a agregar el 30, quedando de la siguiente manera:
+
+![Se agrega 30 a la pila](./images/added_20_to_stack.png)
+
+La pila actual desde el fondo hasta la parte superior quedaría de la siguiente manera 10, 20 y 30. Si nosotros quisieramos eliminar el 10, en este caso no podríamos debido a que tenemos tanto el 30 como el 20 en medio, por lo tanto, es necesario eliminar primero desde la parte superior hasta llegar al fondo. Para este ejemplo en particular vamos a tener que eliminar el 30 luego el 20 y al final el 10 aplicando **LIFO (First In Last Out)**, es decir, 10 fue el primero en entrar a la pila pero el último en salir, veamos el ejemplo de manera gráfica con imágenes
+
+![Eliminamos 30 de la pila](./images/removing_30_to_stack.png)
+
+Ahora vamos a eliminar el 20 de la pila
+
+![Eliminamos 20 de la pila](./images/removing_20_to_stack.png)
+
+Ahora vamos a eliminar el último elemento de la pila en este caso el 10
+
+![Eliminamos 10 de la pila](./images/removing_10_to_stack.png)
+
+ De esta manera hemos agregado y eliminado elementos de la pila
 
 ## Colas
 
@@ -29,15 +51,3 @@ Las colas son estructuras de datos lineales que siguen el principio **FIFO (Firs
 - **Enqueue**: Agrega un elemento al final (posterior) de la cola.
 - **Dequeue**: Elimina y devuelve el elemento frontal de la cola.
 - **Front (o Peek)**: Devuelve el elemento frontal de la cola sin eliminarlo.
-
-## Diferencias entre pilas y colas
-
-Las principales diferencias las podemos apreciar en la siguiente tabla
-
-| ---------------       | ---------------                                     | ---------------                                                        |
-| Característica        | Pila                                                | Cola                                                                   |
-| Definición            | Estructura de Datos Lineal que usa **LIFO**         | Estructura de Datos Lineal que usa **FIFO**                            |
-| Operaciones Primarias | **push**, **pop**, **peek**                         | **Enqueue**, **Dequeue**, **Rear**, **Front**                          |
-| Inserción/Eliminación | Los elementos se agregan o eliminan al final (top)  | Los elementos se agregan en la parte trasera y se eliminan al frente   |
-| Ejemplos              | Historial del navegador (botón regresar o atrás)    | tareas programadas de CPU                                              |
-| Implementación        | Se pueden implementar con arrays o listas enlazadas | Se pueden implementar con arrays, listas anidadas o buffers circulares |
