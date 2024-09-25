@@ -40,7 +40,7 @@ Ahora vamos a eliminar el último elemento de la pila en este caso el 10
 
 ![Eliminamos 10 de la pila](./images/removing_10_to_stack.png)
 
- De esta manera hemos agregado y eliminado elementos de la pila
+De esta manera hemos agregado y eliminado elementos de la pila
 
 ## Colas
 
@@ -51,3 +51,48 @@ Las colas son estructuras de datos lineales que siguen el principio **FIFO (Firs
 - **Enqueue**: Agrega un elemento al final (posterior) de la cola.
 - **Dequeue**: Elimina y devuelve el elemento frontal de la cola.
 - **Front (o Peek)**: Devuelve el elemento frontal de la cola sin eliminarlo.
+
+### Ejemplo gráfico
+
+Ahora veamos un ejemplo de como funcionan las colas.
+
+Cola vacía
+
+![Cola vacía](./images/empty_queue.png)
+
+Ahora vamos a agregar los elementos 10, 20 y 30 a la cola en ese orden. En este caso vamos a agregarlas usando **push** de la siguiente manera
+
+```js
+const queue = [];
+
+queue.push(10);
+queue.push(20);
+queue.push(30);
+
+console.log(queue) // [10, 20, 30]
+```
+
+La cola quedaría de la siguiente manera:
+
+![Cola actual](./images/current_queue.png)
+
+Ahora vamos a eliminar los elementos, vamos a eliminar el elemento 10, quedaría de la siguiente manera
+
+![Eliminando 10 de la cola](./images/removing_30_from_queue.png)
+
+Esto lo podemos ver reflejado en JavaScript mediante el siguiente código
+
+```js
+queue.shift()
+console.log(queue) // [20, 30]
+```
+
+Si nosotros queremos eliminar todos los elementos (20 y 30) vamos a seguir los pasos anteriores como se puede ver en el siguiente código
+
+```js
+queue.shift()
+queue.shift()
+console.log(queue) // []
+```
+
+De está manera la cola queda vacía, y se aplica **FIFO (First In First Out)**, es decir, eliminamos primero el 10, luego el 20 y al final el 30 se eliminan en el mismo orden que entraron.
